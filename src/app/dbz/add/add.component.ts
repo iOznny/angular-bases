@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../interfaces/dbz.interface';
 
 @Component({
@@ -10,7 +10,7 @@ import { Character } from '../interfaces/dbz.interface';
 
 export class AddComponent {
 
-  @Input() public characters: Character[] = [];
+  @Output() onNewChar: EventEmitter<Character> = new EventEmitter();
   @Input() public character: Character = {
     name: '',
     power: 0
@@ -20,7 +20,7 @@ export class AddComponent {
     // Validación del registro.
     if(this.character.name.trim().length == 0) { return; }
 
-    this.characters.push(this.character);
+    this.onNewChar.emit(this.character);
     this.character = {
       name: '',
       power: 0
