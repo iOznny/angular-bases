@@ -6,6 +6,6 @@
     </div>
 
     <div class="col">
-        <app-add [characters]="characters"></app-add>
+        <app-add [character]="newCharacter" (onNewChar)="addCharacter($event)"></app-add>
     </div>
 </div>

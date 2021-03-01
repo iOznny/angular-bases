@@ -10,4 +10,6 @@ export class CharactersComponent {
 
   @Input() public characters: Character[] = [];
 
+  
+
 }
