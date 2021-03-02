@@ -4,27 +4,31 @@ import { Character } from "../interfaces/dbz.interface";
 @Injectable()
 export class DBZService {
 
-    private _characters: Character[] = [
-        {
-          name: 'Goku',
-          power: 20000
-        },
-        {
-          name: 'Krilin',
-          power: 15000
-        },
-        {
-          name: 'Vegetta',
-          power: 8500
-        },
-    ];
+  private _characters: Character[] = [
+      {
+        name: 'Goku',
+        power: 20000
+      },
+      {
+        name: 'Krilin',
+        power: 15000
+      },
+      {
+        name: 'Vegetta',
+        power: 8500
+      },
+  ];
 
-    get characters(): Character[] {
-        return [...this._characters];
-    }
+  get characters(): Character[] {
+      return [...this._characters];
+  }
 
-    constructor() {
-        console.log('Servicio initialized');
-    }
+  constructor() {
+      console.log('Servicio initialized');
+  }
+
+  addCharacter(p: Character) {
+    this._characters.push(p);
+  }
 
 }

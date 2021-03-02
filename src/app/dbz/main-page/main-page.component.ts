@@ -15,15 +15,4 @@ export class MainPageComponent {
     power: 100
   }
 
-  constructor(private dbz: DBZService) {
-  }
-
-  // Añadimos los argumentos que vienen desde el componente hijo (add).
-  addCharacter(e: Character) {
-    //console.log(e);
-    //debugger;
-   
-    //this.characters.push(e);
-  }
-
 }
