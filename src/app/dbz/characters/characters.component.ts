@@ -9,8 +9,6 @@ import { DBZService } from '../services/dbz.service';
 
 export class CharactersComponent {
 
-  //@Input() public characters: Character[] = [];
-
   get characters() {
     return this.dbz.characters;
   }

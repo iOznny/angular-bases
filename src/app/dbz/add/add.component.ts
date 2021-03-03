@@ -10,7 +10,7 @@ import { DBZService } from '../services/dbz.service';
 })
 
 export class AddComponent {
-
+  
   //@Output() onNewChar: EventEmitter<Character> = new EventEmitter();
   @Input() public character: Character = {
     name: '',
